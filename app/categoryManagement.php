@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/table.css">
-    <title>Administration</title>
+    <link rel="stylesheet" href="css/form.css">
+    <title>Category Management</title>
 </head>
 <body>
     <div class="main">
@@ -14,14 +15,16 @@
         <?php 
         include("Components/head.php"); 
         include("Components/menu.php");
+
+
+        // Category Creation form
+        include("Components/createCategoryForm.php");
+
+
+        // Category Listing
+        include("Components/categoryTable.php");
         ?>
 
-
-        <div class="maincontenttitle">Category Management</div>
-        <div class="maincontent">
-        
-        </div>
-
-    </div>    
+    </div>  
 </body>
 </html>

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/form.css">
-    <title>New Entry</title>
+    <title>New Gain</title>
 </head>
 <body>
     <div class="main">
@@ -17,7 +17,7 @@
         ?>
 
 
-        <div class="maincontenttitle">Process a new entry</div>
+        <div class="maincontenttitle">Process a new gain</div>
         <div class="maincontent">
             <form id="formulaire" method="POST" action="functions/newEntree.php">
                 <div class="form-group">
@@ -38,13 +38,14 @@
                     <input required="required" type="text" id="cost" name="cost" class="form-control" />
                 </div>
 
-                
-
                 <div class="form-group">
                     <input type="submit" value="Add new entry" name="Valider" class="btn btn-primary" />
                 </div>
             </form>
         </div>
+
+
+        
 
 
 

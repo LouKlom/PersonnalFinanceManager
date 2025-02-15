@@ -1,13 +1,15 @@
 <?php
+include("bdd.php");
 
 $date = $_POST['date'];
-$category = $_POST['category'];
+$id_category = $_POST['category'];
 $cost = $_POST['cost'];
 $description = $_POST['description'];
+$type = "Cost";
+
+$req = "INSERT INTO entry (value, date, description, id_category, type) VALUES ($cost, '$date', '$description', $id_category, '$type')";
+$ex = $link->prepare($req);
+$ex->execute();
 
 
-echo $date."<br>";
-echo $category."<br>";
-echo $cost."<br>";
-echo $description."<br>";
-
+header('Location: '.$_SERVER['HTTP_REFERER'].'');

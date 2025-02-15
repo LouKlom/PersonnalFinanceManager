@@ -7,6 +7,7 @@
                 <th>Cost</th>
                 <th>Description</th>
                 <th>Date</th>
+                <th>Option</th>
             </tr>
             <?php
             $req = "SELECT e.*, c.label AS category_label
@@ -27,6 +28,14 @@
                     <td><?php echo $row["value"]; ?></td>
                     <td><?php echo $row["description"]; ?></td>
                     <td><?php echo $row["date"]; ?></td>
+                    <td>
+                    <a href="editGainEntry.php?id=<?php echo $row['id_entry']; ?>">
+                        <img src="images/edit.png" alt="Modifier" width="20" height="20">
+                    </a>
+                    <a href="functions/deleteEntry.php?id=<?php echo $row['id_entry']; ?>">
+                        <img src="images/delete.png" alt="Activate" width="20" height="20">
+                    </a>
+                    </td>
                 </tr>
             <?php
             }

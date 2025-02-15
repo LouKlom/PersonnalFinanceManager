@@ -1,3 +1,5 @@
+<?php include("functions/bdd.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/table.css">
     <title>New Gain</title>
 </head>
 <body>
@@ -14,39 +17,9 @@
         <?php 
         include("Components/head.php"); 
         include("Components/menu.php");
+        include("Components/newGainForm.php");
+        include("Components/lastEntryGainTable.php");
         ?>
-
-
-        <div class="maincontenttitle">Process a new gain</div>
-        <div class="maincontent">
-            <form id="formulaire" method="POST" action="functions/newEntree.php">
-                <div class="form-group">
-                    <label for="date">Date:</label>
-                    <input required="required" type="date" id="start" name="date" value="<?php echo date("Y-m-d"); ?>" class="form-control" />
-                </div>
-
-                <div class="form-group">
-                    <label for="Category">Category</label>
-                    <select class="form-control">
-                        <option>Test</option>
-                        <option>TEST 3</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="Cost">Cost</label>
-                    <input required="required" type="text" id="cost" name="cost" class="form-control" />
-                </div>
-
-                <div class="form-group">
-                    <input type="submit" value="Add new entry" name="Valider" class="btn btn-primary" />
-                </div>
-            </form>
-        </div>
-
-
-        
-
 
 
     </div>    
